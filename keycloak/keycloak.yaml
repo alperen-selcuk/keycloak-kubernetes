@@ -4,6 +4,8 @@ metadata:
   name: keycloak
 spec:
   instances: 1
+  ingress: 
+    className: nginx //change if you use different ingress operator
   db:
     vendor: postgres
     host: postgres-db
