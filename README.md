@@ -46,3 +46,13 @@ then install keycloak.yaml
 ```
 kubectl apply -f keycloak-kubernetes/keycloak/.
 ```
+
+## admin
+
+last action is create dns record or add dns name your hostname with kubernetes loadbalancer IP then access gui with below user and password
+
+```
+kubectl get secret keycloak-initial-admin -o jsonpath='{.data.username}' | base64 --decode
+kubectl get secret keycloak-initial-admin -o jsonpath='{.data.password}' | base64 --decode
+```
+
