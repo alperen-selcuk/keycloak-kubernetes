@@ -27,5 +27,22 @@ you need to install postgres as a statefullset. before that you need create pers
 kubectl apply -f keycloak-kubernetes/postgres/.
 ```
 
+## keycloak app
 
+before you need generate a self signed certificate or apply your own certificate if you have already one.
 
+you can genereta certificate like this;
+
+```
+openssl req -subj '/CN=keycloak.yourdomain.com/O=Test Keycloak./C=US' -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out certificate.pem
+```
+
+```
+kubectl create secret tls keycloak-tls --cert certificate.pem --key key.pem
+```
+
+then install keycloak.yaml
+
+```
+kubectl apply -f keycloak-kubernetes/keycloak/.
+```
