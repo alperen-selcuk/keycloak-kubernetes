@@ -17,7 +17,8 @@ kubectl apply -f https://raw.githubusercontent.com/keycloak/keycloak-k8s-resourc
 
 you need to install postgres as a statefullset. before that you need create persistenvolume. clone this repo 
 
-kubectl apply -f ./postgres/
-
+```
+kubectl apply -f keycloak-kubernetes/postgres/
+```
 
 
