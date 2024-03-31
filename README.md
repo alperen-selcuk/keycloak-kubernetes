@@ -24,7 +24,7 @@ kubectl create secret generic keycloak-db-secret \
 you need to install postgres as a statefullset. before that you need create persistenvolume. clone this repo 
 
 ```
-kubectl apply -f keycloak-kubernetes/postgres/
+kubectl apply -f keycloak-kubernetes/postgres/.
 ```
 
 
