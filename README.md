@@ -15,10 +15,17 @@ kubectl apply -f https://raw.githubusercontent.com/keycloak/keycloak-k8s-resourc
 
 ## postgres sts
 
+first create db user and password
+
+kubectl create secret generic keycloak-db-secret \
+  --from-literal=username=your-username \
+  --from-literal=password=your-password
+
 you need to install postgres as a statefullset. before that you need create persistenvolume. clone this repo 
 
 ```
 kubectl apply -f keycloak-kubernetes/postgres/
 ```
+
 
 
