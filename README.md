@@ -9,7 +9,7 @@ with this repo you can install keycloak on kubernetes.
 first create db user and password
 
 ```
-kubectl create secret generic keycloak-db-secret --from-literal=username="your-username" --from-literal=password="your-password"
+kubectl create secret generic keycloak-db-secret --from-literal=username="your-db-user" --from-literal=password="your-db-password"
 ```
 
 you need to install postgres as a statefullset. before that you need create persistenvolume. clone this repo 
@@ -42,6 +42,10 @@ openssl req -subj '/CN=keycloak.yourdomain.com/O=Test Keycloak./C=US' -newkey rs
 ```
 kubectl create secret tls keycloak-tls --cert certificate.pem --key key.pem
 ```
+
+you need configure postgres user and password also in keycloak application so you can use seperate secret but data will same.
+
+kubectl create secret generic keycloak-secret --from-literal=username="your-db-user" --from-literal=password="your-db-password"
 
 then install keycloak.yaml
 
