@@ -1,5 +1,8 @@
 # keycloak-kubernetes
 
+![image](https://github.com/alperen-selcuk/keycloak-kubernetes/assets/78741582/2e1ac5cd-563c-476c-8ad3-06ff18a7a970)
+
+
 with this repo you can install keycloak on kubernetes. 
 
 
