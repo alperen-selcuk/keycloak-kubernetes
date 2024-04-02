@@ -5,15 +5,15 @@ metadata:
 spec:
   instances: 1
   ingress: 
-    className: nginx //change if you use different ingress operator
+    className: nginx 
   db:
     vendor: postgres
     host: postgres-db
     usernameSecret:
-      name: keycloak-db-secret
+      name: keycloak-secret
       key: username
     passwordSecret:
-      name: keycloak-db-secret
+      name: keycloak-secret
       key: password
   http:
     tlsSecret: keycloak-tls
