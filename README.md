@@ -48,7 +48,7 @@ kubectl create secret tls keycloak-tls --cert certificate.pem --key key.pem
 
 you need configure postgres user and password also in keycloak application so you can use seperate secret but data will same.
 
-kubectl create secret generic keycloak-secret --from-literal=username="your-db-user" --from-literal=password="your-db-password"
+```kubectl create secret generic keycloak-secret --from-literal=username="your-db-user" --from-literal=password="your-db-password"```
 
 then install keycloak.yaml
 
